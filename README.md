@@ -16,30 +16,29 @@ Google Drive: https://your-video-link
 
 ## 📸 Screenshots
 
-### 🏠 Hero Section
-![Hero](./screenshots/hero.png)
+### Desktop
 
-### 🔐 Login Page
-![Login](./screenshots/login.png)
+<p align="center">
+  <img src="./screenshots/hero.png" width="48%" alt="Hero"/>
+  <img src="./screenshots/login.png" width="48%" alt="Login"/>
+</p>
 
-### 🔍 Search & Filters
-![Filters](./screenshots/filters.png)
+<p align="center">
+  <img src="./screenshots/filters.png" width="48%" alt="Filters"/>
+  <img src="./screenshots/modal.png" width="48%" alt="Character Modal"/>
+</p>
 
-### 👤 Character Details Modal
-![Character Modal](./screenshots/modal.png)
+<p align="center">
+  <img src="./screenshots/pagination.png" width="48%" alt="Pagination"/>
+</p>
 
-### 📄 Pagination
-![Pagination](./screenshots/pagination.png)
+### Mobile
 
-### 📱 Mobile View 1
-![Mobile View 1](./screenshots/mobile1.png)
-
-### 📱 Mobile View 2
-![Mobile View 2](./screenshots/mobile2.png)
-
-### 📱 Mobile View 3
-![Mobile View 3](./screenshots/mobile3.png)
----
+<p align="center">
+  <img src="./screenshots/mobile1.png" width="30%" alt="Mobile 1"/>
+  <img src="./screenshots/mobile2.png" width="30%" alt="Mobile 2"/>
+  <img src="./screenshots/mobile3.png" width="30%" alt="Mobile 3"/>
+</p>
 
 ## ✨ Features
 
