@@ -8,8 +8,8 @@
   padding: 1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: color-mix(in oklab, var(--surface) 90%, transparent);
-  backdrop-filter: saturate(170%) blur(16px);
+  background: color-mix(in oklab, var(--surface) 60%, transparent);
+  backdrop-filter: saturate(170%) blur(6px);
   box-shadow: var(--shadow-elevated);
   animation: fade-up-in 480ms var(--ease-out-expo) both;
 }
@@ -44,6 +44,7 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  outline: none;
   padding: 0.32rem 0.35rem 0.32rem 1rem;
   border-radius: 999px;
   border: 1px solid var(--line);
@@ -54,11 +55,7 @@
     background-color var(--dur-fast) var(--ease-out-expo);
 }
 
-.search-filter-bar__search-wrap:focus-within {
-  border-color: var(--accent-border);
-  background: var(--surface);
-  box-shadow: var(--shadow-glow);
-}
+
 
 .search-filter-bar__search-icon {
   color: var(--fg-subtle);
@@ -71,9 +68,17 @@
   border: none;
   background: transparent;
   outline: none;
+  box-shadow: none;
   font-size: 0.92rem;
   font-weight: 500;
   padding: 0.45rem 0;
+}
+
+.search-filter-bar__search:focus,
+.search-filter-bar__search:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border: none;
 }
 
 .search-filter-bar__search::-webkit-search-cancel-button {

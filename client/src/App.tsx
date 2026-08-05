@@ -33,7 +33,7 @@ export function App(): React.ReactElement {
     <div className="app">
       <header className="app__topbar glass">
         <div className="app__topbar-inner">
-          <span className="app__wordmark micro-label">STAR WARS</span>
+          <span className="app__wordmark micro-label font-extrabold text-2xl" >STAR WARS</span>
 
           
 

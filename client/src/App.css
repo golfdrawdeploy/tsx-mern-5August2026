@@ -27,7 +27,9 @@
   padding: 0.8rem 1.5rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  position: relative;
+ 
+  gap: 0.5rem;
   flex-wrap: nowrap;
 }
 
@@ -35,22 +37,23 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 1rem;
   color: var(--fg);
-  letter-spacing: 0.5em;
+  letter-spacing: 0.2em; /* 1em is extremely large */
+  font-weight: 800;
+  font-size: 2rem; /* Add a value */
+  height: 40px;
   flex: 0 0 auto;
-  min-width: 0;
- 
+  min-width: 50%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .app__wordmark::before {
-  content: 'SW';
+  content: '';
   width: 22px;
   height: 22px;
-  border-radius: 7px;
+  border-radius: 50%;
   color:var(--bg-base);
   padding: 2px 3px;
   background: var(--gradient-accent);
@@ -58,37 +61,12 @@
   flex-shrink: 0;
 }
 
-.app__topbar-search {
-  flex: 1;
-  max-width: 420px;
-  margin-left: 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.55rem 0.9rem;
-  border-radius: 999px;
-  background: var(--surface-inset);
-}
 
-.app__topbar-search:focus-within {
-  border-color: var(--accent-border);
-  background: var(--surface);
-  box-shadow: var(--shadow-glow);
-}
 
-.app__topbar-search-icon {
-  color: var(--fg-subtle);
-  flex-shrink: 0;
-}
 
-.app__topbar-search-input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  outline: none;
-  color: var(--fg);
-  font-size: 0.87rem;
-}
+
+
+
 
 .app__topbar-search-input::placeholder {
   color: var(--fg-subtle);
