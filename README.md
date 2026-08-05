@@ -4,22 +4,41 @@ A modern React + TypeScript application that displays Star Wars characters using
 
 ## 🚀 Live Demo
 
-- **Frontend:** https://your-vercel-link.vercel.app
-- **Backend:** https://your-backend-url.com
+- **Frontend:** https://tsx-mern-5-aug2026-6mc1h03ki-career-elevate.vercel.app/
+
 
 ## 🎥 Demo Video
 
-- YouTube / Google Drive: https://your-video-link
+Google Drive: https://your-video-link
+
+
+
 
 ## 📸 Screenshots
 
-> Add screenshots of:
-- Login Page
-- Character Grid
-- Search & Filters
-- Character Details Modal
-- Responsive Mobile View
+### 🏠 Hero Section
+![Hero](./screenshots/hero.png)
 
+### 🔐 Login Page
+![Login](./screenshots/login.png)
+
+### 🔍 Search & Filters
+![Filters](./screenshots/filters.png)
+
+### 👤 Character Details Modal
+![Character Modal](./screenshots/modal.png)
+
+### 📄 Pagination
+![Pagination](./screenshots/pagination.png)
+
+### 📱 Mobile View 1
+![Mobile View 1](./screenshots/mobile1.png)
+
+### 📱 Mobile View 2
+![Mobile View 2](./screenshots/mobile2.png)
+
+### 📱 Mobile View 3
+![Mobile View 3](./screenshots/mobile3.png)
 ---
 
 ## ✨ Features
