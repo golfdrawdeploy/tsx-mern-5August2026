@@ -1,0 +1,73 @@
+.character-list {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem 4rem;
+}
+
+@media (max-width: 560px) {
+  .character-list {
+    padding: 1.25rem 1rem 3rem;
+  }
+}
+
+/* indeterminate refetch bar */
+.character-list__progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  overflow: hidden;
+  z-index: 200;
+  background: transparent;
+}
+
+.character-list__progress-bar {
+  height: 100%;
+  width: 100%;
+  background: var(--gradient-accent);
+  transform-origin: left center;
+  animation: progress-indeterminate 1.2s var(--ease-out-expo) infinite;
+}
+
+.character-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+  gap: 1.15rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .character-list__grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.85rem;
+  }
+}
+
+.character-list__empty {
+  margin-top: 2rem;
+  padding: 3.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  text-align: center;
+  color: var(--fg-muted);
+  border-style: dashed;
+  background: var(--surface-2);
+  animation: pop-in 420ms var(--ease-out-expo) both;
+}
+
+.character-list__empty p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.character-list__empty-icon {
+  color: var(--fg-subtle);
+  padding: 0.85rem;
+  border-radius: 999px;
+  background: var(--surface-inset);
+  border: 1px solid var(--line);
+}

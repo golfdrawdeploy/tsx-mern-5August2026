@@ -1,0 +1,46 @@
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: center;
+  max-width: 520px;
+  margin: 3rem auto;
+  padding: 2.25rem 1.5rem;
+  background: var(--surface);
+  border-color: var(--danger-border);
+  animation: pop-in 380ms var(--ease-out-expo) both;
+}
+
+.error-state--compact {
+  margin: 1rem 0;
+  padding: 1.1rem;
+  flex-direction: row;
+  text-align: left;
+  gap: 0.75rem;
+}
+
+.error-state__icon {
+  color: var(--danger);
+  padding: 0.6rem;
+  border-radius: 999px;
+  background: var(--danger-soft);
+  flex-shrink: 0;
+}
+
+.error-state--compact .error-state__icon {
+  padding: 0.4rem;
+  width: 20px;
+  height: 20px;
+}
+
+.error-state__message {
+  margin: 0;
+  color: var(--fg-muted);
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+.error-state__retry {
+  flex-shrink: 0;
+}

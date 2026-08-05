@@ -1,0 +1,147 @@
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--bg-base);
+  overflow: hidden;
+}
+
+.login-page__mesh {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0 / 100% 52px,
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 52px 100%,
+    var(--gradient-hero);
+  -webkit-mask-image: radial-gradient(90% 80% at 50% 30%, oklch(0 0 0) 30%, transparent 100%);
+  mask-image: radial-gradient(90% 80% at 50% 30%, oklch(0 0 0) 30%, transparent 100%);
+  pointer-events: none;
+}
+
+.login-card {
+  position: relative;
+  width: min(420px, 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 2.25rem;
+  animation: pop-in 560ms var(--ease-out-expo) both;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 1.6rem;
+  }
+}
+
+.login-card__wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--fg);
+  letter-spacing: 0.12em;
+}
+
+.login-card__wordmark::before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  box-shadow: 0 6px 14px -8px oklch(0.47 0.17 258 / 0.9);
+}
+
+.login-card__title {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.login-card__subtitle {
+  margin: 0.5rem 0 1.75rem;
+  color: var(--fg-muted);
+  font-size: 0.92rem;
+}
+
+.login-card__label {
+  margin-bottom: 0.4rem;
+  color: var(--fg-muted);
+}
+
+.login-card__input {
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 1.1rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-inset);
+  outline: none;
+  font-size: 0.92rem;
+}
+
+.login-card__input::placeholder {
+  color: var(--fg-subtle);
+}
+
+.login-card__input:focus {
+  border-color: var(--accent-border);
+  background: var(--surface);
+  box-shadow: var(--shadow-glow);
+}
+
+.login-card__error {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--danger-border);
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 0.84rem;
+  font-weight: 600;
+  animation: pop-in 280ms var(--ease-spring) both;
+}
+
+.login-card__submit {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.login-card__spinner {
+  animation: spin 0.9s linear infinite;
+}
+
+.login-card__hint {
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--line);
+  text-align: center;
+  font-size: 0.74rem;
+  color: var(--fg-subtle);
+  letter-spacing: 0.02em;
+}
+
+.login-card__wordmark::before {
+  background: var(--gradient-brand);
+  box-shadow: var(--shadow-brand);
+}
+
+.login-page__mesh {
+  animation: aurora-drift 20s ease-in-out infinite;
+}
+
+.login-card {
+  overflow: hidden;
+}
+
+.login-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--gradient-brand);
+}
+
+.login-card__title {
+  font-weight: 800;
+}

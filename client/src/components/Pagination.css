@@ -1,0 +1,107 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.25rem;
+}
+
+.pagination__pill {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem;
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  animation: fade-up-in 420ms var(--ease-out-expo) both;
+}
+
+.pagination__nav {
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--fg-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color var(--dur-fast) var(--ease-out-expo),
+    background-color var(--dur-fast) var(--ease-out-expo);
+}
+
+.pagination__nav:hover:not(:disabled) {
+  color: var(--fg);
+  background: var(--surface-inset);
+}
+
+.pagination__nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pagination__pages {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0 0.2rem;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+.pagination__page {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--fg-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    color var(--dur-fast) var(--ease-out-expo),
+    background-color var(--dur-fast) var(--ease-out-expo),
+    transform var(--dur-fast) var(--ease-spring);
+}
+
+.pagination__page:hover {
+  color: var(--fg);
+  background: var(--surface-inset);
+  transform: translateY(-1px);
+}
+
+.pagination__page--active,
+.pagination__page--active:hover {
+  background: var(--gradient-accent);
+  color: var(--accent-fg);
+  box-shadow: 0 6px 14px -8px oklch(0.47 0.17 258 / 0.95);
+}
+
+.pagination__ellipsis {
+  min-width: 22px;
+  text-align: center;
+  color: var(--fg-subtle);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 480px) {
+  .pagination__nav {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
+
+.pagination__pill {
+  border: 1px solid var(--line);
+  background: color-mix(in oklab, var(--surface) 92%, transparent);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-elevated);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination__page--active,
+.pagination__page--active:hover {
+  box-shadow: var(--shadow-brand);
+}

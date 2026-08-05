@@ -1,0 +1,188 @@
+.filter-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.filter-select__label {
+  padding-left: 0.15rem;
+  font-size: 9.5px;
+  color: var(--fg-subtle);
+}
+
+.filter-select__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.62rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--surface-inset);
+  color: var(--fg);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: var(--shadow-xs);
+  transition:
+    border-color var(--dur-fast) var(--ease-out-expo),
+    background-color var(--dur-fast) var(--ease-out-expo),
+    box-shadow var(--dur-fast) var(--ease-out-expo),
+    transform var(--dur-fast) var(--ease-out-expo);
+}
+
+.filter-select__trigger:hover {
+  border-color: var(--accent-border);
+  background: var(--surface);
+  transform: translateY(-1px);
+}
+
+.filter-select__trigger--active {
+  border-color: var(--chip-border, var(--accent-border));
+  background: var(--chip-soft, var(--accent-soft));
+  color: var(--chip-fg, var(--accent-strong));
+}
+
+.filter-select--violet {
+  --chip-soft: var(--accent-soft);
+  --chip-border: var(--accent-border);
+  --chip-fg: var(--accent-strong);
+}
+.filter-select--cyan {
+  --chip-soft: var(--accent-2-soft);
+  --chip-border: color-mix(in oklab, var(--accent-2) 45%, transparent);
+  --chip-fg: color-mix(in oklab, var(--accent-2) 78%, var(--fg));
+}
+.filter-select--amber {
+  --chip-soft: var(--amber-soft);
+  --chip-border: color-mix(in oklab, var(--amber) 45%, transparent);
+  --chip-fg: color-mix(in oklab, var(--amber) 72%, var(--fg));
+}
+
+.filter-select__value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.filter-select__chevron {
+  flex-shrink: 0;
+  color: var(--fg-subtle);
+  transition: transform var(--dur-fast) var(--ease-out-expo);
+}
+
+.filter-select__chevron--open {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+.filter-select__clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  background: color-mix(in oklab, var(--chip-fg, var(--accent)) 18%, transparent);
+}
+
+.filter-select__clear-icon {
+  width: 11px;
+  height: 11px;
+}
+
+.filter-select__panel {
+  position: absolute;
+  z-index: 80;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  right: 0;
+  min-width: 190px;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow-float);
+  animation: pop-in 220ms var(--ease-out-expo) both;
+}
+
+.filter-select__search {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.6rem;
+  margin-bottom: 0.4rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-inset);
+  border: 1px solid var(--line);
+}
+
+.filter-select__search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.82rem;
+}
+
+.filter-select__search-icon {
+  color: var(--fg-subtle);
+  flex-shrink: 0;
+}
+
+.filter-select__options {
+  max-height: min(46vh, 260px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overscroll-behavior: contain;
+}
+
+.filter-select__option {
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  border: none;
+  border-radius: 0.55rem;
+  background: transparent;
+  color: var(--fg-muted);
+  font-size: 0.84rem;
+  font-weight: 550;
+  cursor: pointer;
+  transition:
+    background-color 120ms var(--ease-out-expo),
+    color 120ms var(--ease-out-expo);
+}
+
+.filter-select__option:hover {
+  background: var(--surface-inset);
+  color: var(--fg);
+}
+
+.filter-select__option--selected {
+  background: var(--chip-soft, var(--accent-soft));
+  color: var(--chip-fg, var(--accent-strong));
+  font-weight: 700;
+}
+
+.filter-select__empty {
+  margin: 0;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--fg-subtle);
+}
+
+@media (max-width: 560px) {
+  .filter-select__panel {
+    left: 0;
+    right: auto;
+    width: min(88vw, 320px);
+  }
+}

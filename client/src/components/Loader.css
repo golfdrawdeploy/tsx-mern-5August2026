@@ -1,0 +1,91 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 60vh;
+  padding: 3rem 1rem;
+  color: var(--fg-muted);
+  animation: fade-in 300ms var(--ease-out-expo) both;
+}
+
+.loader--inline {
+  min-height: 0;
+  padding: 2rem 1rem;
+}
+
+.loader__ring {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+}
+
+.loader__ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 3px solid var(--line);
+}
+
+.loader__ring::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  border-top-color: var(--accent);
+  border-right-color: color-mix(in oklab, var(--accent) 45%, transparent);
+  animation: spin 0.85s linear infinite;
+}
+
+.loader__core {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--gradient-accent);
+  animation: pulse-dot 1.4s var(--ease-out-expo) infinite;
+}
+
+.loader__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+}
+
+.loader__dots {
+  display: inline-flex;
+  gap: 4px;
+  margin-left: 2px;
+}
+
+.loader__dots span {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+
+.loader__dots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.loader__dots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.loader__spinner {
+  animation: spin 0.9s linear infinite;
+  color: var(--accent);
+}
+
+.loader__ring::after {
+  border-top-color: var(--accent);
+  border-right-color: var(--accent-2);
+}
