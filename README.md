@@ -9,7 +9,7 @@ A modern React + TypeScript application that displays Star Wars characters using
 
 ## 🎥 Demo Video
 
-Google Drive: https://your-video-link
+Google Drive: [https://your-video-link](https://drive.google.com/file/d/1X3JN5VP53zQm-s4QXD4U_4XOjvu4djoJ/view)
 
 
 
