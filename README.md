@@ -4,12 +4,12 @@ A modern React + TypeScript application that displays Star Wars characters using
 
 ## 🚀 Live Demo
 
-- **Frontend:** https://tsx-mern-5-aug2026-6mc1h03ki-career-elevate.vercel.app/
+- **Frontend:** [https://tsx-mern-5-aug2026-6mc1h03ki-career-elevate.vercel.app/](https://tsx-mern-5-aug2026-ten.vercel.app/)
 
 
 ## 🎥 Demo Video
 
-Google Drive: [https://your-video-link](https://drive.google.com/file/d/1X3JN5VP53zQm-s4QXD4U_4XOjvu4djoJ/view)
+Google Drive: [https://complete-video-link](https://drive.google.com/file/d/1X3JN5VP53zQm-s4QXD4U_4XOjvu4djoJ/view)
 
 
 
